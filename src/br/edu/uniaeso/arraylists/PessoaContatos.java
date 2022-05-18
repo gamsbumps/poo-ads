@@ -20,7 +20,7 @@ public class PessoaContatos {
         if(name != null){
             this.name = name;
         }else{
-            System.out.println("Nome não pode ser nulo!");
+            throw new IllegalArgumentException("Colocar nome válido");
         }
     }
 
