@@ -24,9 +24,10 @@ public class CadastroContas {
     }
 
     public void inserir(Banco banco) throws ExcecaoElementoJaExistente, ExcecaoRepositorio {
-
+        System.out.println("Qual sua conta?");
+        setConta(getScanner().next());
         for(int i = 0; i < bc.length; i++) {
-            if (bc[i].getConta().equals(banco.getConta())) {
+            if (bc[i].getConta().equals(conta)) {
                 throw new ExcecaoElementoJaExistente("Conta já existe!");
             } else if (i < bc.length) {
                 bc[i] = banco;
